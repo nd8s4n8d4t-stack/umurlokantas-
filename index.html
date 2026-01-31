@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <title>Umur Lokantası | Klasik Anadolu Mutfağı</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -17,14 +18,13 @@
         
         nav { background: rgba(0,0,0,0.95); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
         nav .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); }
-        nav a { text-decoration: none; color: var(--white); border: 1px solid var(--gold); padding: 5px 20px; border-radius: 5px; transition: 0.3s; }
-        nav a:hover { background: var(--gold); color: #000; }
+        nav a { text-decoration: none; color: var(--white); border: 1px solid var(--gold); padding: 5px 20px; border-radius: 5px; }
 
-        /* GİRİŞ EKRANI - GÜVEÇ FOTOĞRAFI BURADA */
+        /* GİRİŞ EKRANI - YENİ GÜVENCELİ LİNK */
         .hero { 
-            height: 85vh; 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1547928576-a4a33237ce35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); 
+            height: 80vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://cdn.pixabay.com/photo/2017/06/06/22/37/turkish-food-2378758_1280.jpg'); 
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat;
@@ -35,25 +35,20 @@
             text-align: center; 
             border-bottom: 5px solid var(--gold);
         }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 5rem); color: var(--gold); text-shadow: 2px 2px 15px rgba(0,0,0,1); margin-bottom: 10px; }
-        .hero p { font-size: 1.5rem; color: #fff; margin-bottom: 30px; font-weight: 600; text-shadow: 1px 1px 10px rgba(0,0,0,1); letter-spacing: 2px; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 5rem); color: var(--gold); text-shadow: 2px 2px 15px rgba(0,0,0,1); }
+        .hero p { font-size: 1.5rem; color: #fff; margin-bottom: 30px; font-weight: 600; text-shadow: 1px 1px 10px rgba(0,0,0,1); }
 
-        .btn { background: var(--gold); color: #000; padding: 18px 45px; font-weight: 700; text-decoration: none; text-transform: uppercase; border: 2px solid var(--gold); transition: 0.4s; }
-        .btn:hover { background: transparent; color: var(--gold); }
+        .btn { background: var(--gold); color: #000; padding: 18px 45px; font-weight: 700; text-decoration: none; text-transform: uppercase; border: 2px solid var(--gold); }
 
-        .menu-section { padding: 80px 10%; background: #0a0a0a; }
-        .menu-section h2 { font-family: 'Playfair Display', serif; color: var(--gold); text-align: center; margin-bottom: 50px; font-size: 2.8rem; }
+        .menu-section { padding: 80px 10%; }
         .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .menu-item { background: var(--card-bg); padding: 40px; border: 1px solid #222; border-top: 4px solid var(--gold); transition: 0.3s; text-align: center; }
-        .menu-item h3 { color: var(--gold); margin-bottom: 15px; font-family: 'Playfair Display', serif; font-size: 1.7rem; }
-        .menu-item p { color: #ccc; font-size: 1.1rem; line-height: 1.6; }
+        .menu-item { background: var(--card-bg); padding: 40px; border-top: 4px solid var(--gold); text-align: center; }
+        .menu-item h3 { color: var(--gold); margin-bottom: 15px; font-family: 'Playfair Display', serif; }
 
         .contact { background: #000; padding: 70px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; border-top: 2px solid var(--gold); }
-        .contact-box h3 { color: var(--gold); margin-bottom: 25px; font-family: 'Playfair Display', serif; }
-        .contact-box p { color: #ddd; margin-bottom: 8px; }
-        .maps-link { display: inline-block; margin-top: 15px; color: var(--gold); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--gold); }
+        .contact-box h3 { color: var(--gold); margin-bottom: 20px; }
         
-        footer { text-align: center; padding: 40px; background: #000; color: #666; border-top: 1px solid #111; }
+        footer { text-align: center; padding: 40px; background: #000; color: #666; }
     </style>
 </head>
 <body>
@@ -70,19 +65,18 @@
 </section>
 
 <section id="menu" class="menu-section">
-    <h2>Günün Lezzetleri</h2>
     <div class="menu-grid">
         <div class="menu-item">
             <h3>Tencere Yemekleri</h3>
-            <p>Tas kebabı, kuzu güveç ve mevsime özel taze ev yemekleri.</p>
+            <p>Tas kebabı, kuzu güveç ve taze ev yemekleri.</p>
         </div>
         <div class="menu-item">
             <h3>Çorbalar</h3>
-            <p>Süzme mercimek, ezogelin ve Anadolu'nun şifalı sıcak çorbaları.</p>
+            <p>Süzme mercimek, ezogelin ve şifalı çorbalar.</p>
         </div>
         <div class="menu-item">
             <h3>Tatlılar</h3>
-            <p>Ev yapımı fırın sütlaç, fırın kadayıf ve özel kabak tatlısı.</p>
+            <p>Ev yapımı fırın sütlaç ve fırın kadayıf.</p>
         </div>
     </div>
 </section>
@@ -90,23 +84,20 @@
 <section class="contact">
     <div class="contact-box">
         <h3>📍 Adresimiz</h3>
-        <p>Ulu camii mh, 116. Sk. no: 21,</p>
-        <p>63570 Ceylanpınar/Şanlıurfa</p>
-        <a href="https://maps.google.com" target="_blank" class="maps-link">Yol Tarifi Al →</a>
+        <p>Ulu camii mh, 116. Sk. no: 21, Ceylanpınar/Şanlıurfa</p>
     </div>
     <div class="contact-box">
         <h3>📞 İletişim</h3>
-        <p>Rezervasyon:</p>
-        <p style="font-size: 1.5rem; color: var(--gold); font-weight: bold;">0544 768 03 04</p>
+        <p>0544 768 03 04</p>
     </div>
     <div class="contact-box">
-        <h3>⏰ Çalışma Saatleri</h3>
+        <h3>⏰ Saatler</h3>
         <p>Her Gün: 08:00 - 21:00</p>
     </div>
 </section>
 
 <footer>
-    © 2026 Umur Lokantası - Ceylanpınar'ın Geleneksel Lezzet Durağı
+    © 2026 Umur Lokantası - Şanlıurfa
 </footer>
 
 </body>

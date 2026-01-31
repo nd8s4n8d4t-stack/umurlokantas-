@@ -1,56 +1,190 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <title>Umur Lokantası | Klasik Anadolu Mutfağı</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root { 
-            --gold: #D4AF37; 
-            --dark-bg: #0a0a0a; 
-            --card-bg: #1a1a1a;
-            --white: #ffffff;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; background: var(--dark-bg); color: var(--white); }
-        
-        nav { background: rgba(0,0,0,0.95); padding: 1.2rem 8%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--gold); }
-        nav .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); }
-        nav a { text-decoration: none; color: var(--white); border: 1px solid var(--gold); padding: 5px 20px; border-radius: 5px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umur Lokantası | Klasik Anadolu Mutfağı</title>
 
-        /* GİRİŞ EKRANI - YENİ GÜVENCELİ LİNK */
-        .hero { 
-            height: 80vh; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
-                        url('https://cdn.pixabay.com/photo/2017/06/06/22/37/turkish-food-2378758_1280.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-            border-bottom: 5px solid var(--gold);
-        }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 5rem); color: var(--gold); text-shadow: 2px 2px 15px rgba(0,0,0,1); }
-        .hero p { font-size: 1.5rem; color: #fff; margin-bottom: 30px; font-weight: 600; text-shadow: 1px 1px 10px rgba(0,0,0,1); }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        .btn { background: var(--gold); color: #000; padding: 18px 45px; font-weight: 700; text-decoration: none; text-transform: uppercase; border: 2px solid var(--gold); }
+<style>
+:root {
+    --gold:#D4AF37;
+    --dark:#0a0a0a;
+    --card:#1a1a1a;
+    --white:#fff;
+}
 
-        .menu-section { padding: 80px 10%; }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .menu-item { background: var(--card-bg); padding: 40px; border-top: 4px solid var(--gold); text-align: center; }
-        .menu-item h3 { color: var(--gold); margin-bottom: 15px; font-family: 'Playfair Display', serif; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--dark);
+    color:var(--white);
+}
 
-        .contact { background: #000; padding: 70px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; border-top: 2px solid var(--gold); }
-        .contact-box h3 { color: var(--gold); margin-bottom: 20px; }
-        
-        footer { text-align: center; padding: 40px; background: #000; color: #666; }
-    </style>
+/* NAV */
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#000;
+    padding:1.2rem 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2px solid var(--gold);
+}
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:1.8rem;
+    color:var(--gold);
+}
+nav a{
+    color:#fff;
+    border:1px solid var(--gold);
+    padding:6px 22px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* HERO */
+.hero{
+    height:80vh;
+    background:
+        linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+        url('https://cdn.pixabay.com/photo/2017/06/06/22/37/turkish-food-2378758_1280.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border-bottom:5px solid var(--gold);
+}
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(3rem,8vw,5rem);
+    color:var(--gold);
+}
+.hero p{
+    font-size:1.5rem;
+    font-weight:600;
+    margin-bottom:30px;
+}
+.btn{
+    background:var(--gold);
+    color:#000;
+    padding:18px 45px;
+    font-weight:700;
+    text-decoration:none;
+    border:2px solid var(--gold);
+    transition:.3s;
+}
+.btn:hover{
+    background:transparent;
+    color:var(--gold);
+}
+
+/* 🔥 VIDEO MENU SECTION */
+.menu-section{
+    position:relative;
+    padding:100px 10%;
+    overflow:hidden;
+}
+
+/* Video arka plan */
+.menu-video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+/* Koyu overlay */
+.menu-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    z-index:-1;
+}
+
+/* Menü içerik */
+.menu-title{
+    text-align:center;
+    color:var(--gold);
+    margin-bottom:60px;
+    font-family:'Playfair Display',serif;
+    font-size:2.5rem;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.menu-item{
+    background:rgba(26,26,26,.9);
+    padding:40px;
+    border-top:4px solid var(--gold);
+    text-align:center;
+    backdrop-filter:blur(4px);
+    transition:.3s;
+}
+.menu-item:hover{
+    transform:translateY(-10px);
+}
+.menu-item h3{
+    color:var(--gold);
+    margin-bottom:15px;
+    font-family:'Playfair Display',serif;
+}
+
+/* CONTACT */
+.contact{
+    background:#000;
+    padding:70px 10%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:50px;
+    border-top:2px solid var(--gold);
+}
+.contact-box h3{
+    color:var(--gold);
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    background:#000;
+    color:#666;
+}
+
+/* 📱 MOBİL OPTİMİZASYON */
+@media(max-width:768px){
+    .menu-video{
+        display:none;
+    }
+    .menu-section{
+        background:
+            linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
+            url('https://cdn.pixabay.com/photo/2018/04/13/17/14/casserole-3316446_1280.jpg');
+        background-size:cover;
+        background-position:center;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <nav>
@@ -61,14 +195,25 @@
 <section class="hero">
     <h1>Umur Lokantası</h1>
     <p>KLASİK ANADOLU MUTFAĞI</p>
-    <a href="https://wa.me/905447680304" class="btn">Rezervasyon Yap</a>
+    <a class="btn" href="https://wa.me/905447680304">Rezervasyon Yap</a>
 </section>
 
+<!-- 🔥 VIDEO MENU -->
 <section id="menu" class="menu-section">
+
+    <!-- GÜVEÇ VİDEOSU -->
+    <video class="menu-video" autoplay muted loop playsinline>
+        <source src="https://cdn.coverr.co/videos/coverr-hot-food-cooking-6946/1080p.mp4" type="video/mp4">
+    </video>
+
+    <div class="menu-overlay"></div>
+
+    <h2 class="menu-title">MENÜMÜZ</h2>
+
     <div class="menu-grid">
         <div class="menu-item">
             <h3>Tencere Yemekleri</h3>
-            <p>Tas kebabı, kuzu güveç ve taze ev yemekleri.</p>
+            <p>Tas kebabı, kuzu güveç ve günlük ev yemekleri.</p>
         </div>
         <div class="menu-item">
             <h3>Çorbalar</h3>
@@ -83,21 +228,21 @@
 
 <section class="contact">
     <div class="contact-box">
-        <h3>📍 Adresimiz</h3>
-        <p>Ulu camii mh, 116. Sk. no: 21, Ceylanpınar/Şanlıurfa</p>
+        <h3>📍 Adres</h3>
+        <p>Ceylanpınar / Şanlıurfa</p>
     </div>
     <div class="contact-box">
-        <h3>📞 İletişim</h3>
+        <h3>📞 Telefon</h3>
         <p>0544 768 03 04</p>
     </div>
     <div class="contact-box">
         <h3>⏰ Saatler</h3>
-        <p>Her Gün: 08:00 - 21:00</p>
+        <p>08:00 – 21:00</p>
     </div>
 </section>
 
 <footer>
-    © 2026 Umur Lokantası - Şanlıurfa
+    © 2026 Umur Lokantası – Gelenekten Sofraya
 </footer>
 
 </body>
